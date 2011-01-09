@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace log4net.intro
+namespace log4net.intro.Features.RateLimits
 {
     public class RateLimiter
     {
@@ -13,7 +13,7 @@ namespace log4net.intro
         {
             this.allowedCalls = allowedCalls;
             this.duration = duration;
-            ResetLastStartTime();
+            Reset();
         }
 
         public bool IsOverThreshold()
@@ -24,10 +24,7 @@ namespace log4net.intro
         public void Increment()
         {
             if (IsCurrentDurationOver())
-            {
-                ResetLastStartTime();
-                ResetActualCalls();
-            }
+                Reset();
 
             IncrementActualCalls();
         }
@@ -37,6 +34,12 @@ namespace log4net.intro
             var now = DateTime.UtcNow;
             var interval = now - lastStartTime;
             return interval > duration;
+        }
+
+        private void Reset()
+        {
+            ResetLastStartTime();
+            ResetActualCalls();
         }
 
         private void ResetLastStartTime()

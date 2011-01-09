@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Threading;
+using log4net.intro.Features.Performance;
+using log4net.intro.Features.RateLimits;
 
-namespace log4net.intro
+namespace log4net.intro.Features
 {
     /// <summary>
     /// We have created and hosted some expensive business service. Our customers are calling this service to do important
