@@ -5,10 +5,14 @@
     /// </summary>
     public class Program
     {
+        private static readonly ExpensiveServiceProxyBuilder ProxyBuilder = new ExpensiveServiceProxyBuilder("ACME");
+
         public static void Main(params string[] args)
         {
-            var service = new ExpensiveService();
-            service.DoSomethingInteresting();
+            using (var proxy = ProxyBuilder.Build())
+            {
+                proxy.DoSomethingInteresting();
+            }
         }
     }
 }
