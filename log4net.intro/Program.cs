@@ -7,6 +7,8 @@
     {
         public static void Main(params string[] args)
         {
+            var service = new ExpensiveService();
+            service.DoSomethingInteresting();
         }
     }
 }
