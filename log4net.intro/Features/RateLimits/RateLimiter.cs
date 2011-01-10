@@ -11,14 +11,21 @@
             Reset();
         }
 
-        public bool IsOverThreshold()
+        private void IncrementActual()
+        {
+            actual++;
+        }
+
+        private bool IsOverThreshold()
         {
             return actual > limit;
         }
 
         public void Increment()
         {
-            actual++;
+            IncrementActual();
+            if(IsOverThreshold())
+                throw new RateLimitExceededException();
         }
 
         public void Reset()

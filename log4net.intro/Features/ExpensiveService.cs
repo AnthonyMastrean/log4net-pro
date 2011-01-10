@@ -33,9 +33,6 @@ namespace Intro.Features
         /// </summary>
         public void DoSomethingInteresting()
         {
-            if (limiter.IsOverThreshold())
-                throw new RateLimitExceededException();
-
             limiter.Increment();
             using (new PerformanceMonitor(threshold: TimeSpan.FromSeconds(5)))
             {
