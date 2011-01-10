@@ -14,6 +14,7 @@ namespace Intro.Features
     {
         public static readonly ILog Log = LogManager.GetLogger(typeof(ExpensiveService));
         private readonly RateLimiter limiter;
+        private readonly Random random = new Random();
 
         /// <summary>
         /// We want to know every time an expensive service is created so that we can make projections and track usage 
@@ -34,10 +35,10 @@ namespace Intro.Features
         public void DoSomethingInteresting()
         {
             limiter.Increment();
-            using (new PerformanceMonitor(threshold: TimeSpan.FromSeconds(5)))
+            using (new PerformanceMonitor(threshold: TimeSpan.FromSeconds(3)))
             {
                 // ... doing something interesting on our expensive service...
-                Thread.Sleep(700);
+                Thread.Sleep(random.Next(1 * 1000, 5 * 1000));
             }
         }
 

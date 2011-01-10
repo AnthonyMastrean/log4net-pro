@@ -25,7 +25,7 @@
         {
             IncrementActual();
             if(IsOverThreshold())
-                throw new RateLimitExceededException();
+                throw new RateLimitExceededException(string.Format("The API call rate limit was reached at {0} calls.", limit));
         }
 
         public void Reset()
