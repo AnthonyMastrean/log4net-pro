@@ -1,8 +1,8 @@
 Some ideas...
 1. track creation of expensive services
 2. track duration of important service calls
-3. user context
-4. API call limit
+3. client context
+4. rate limiting
 
 References
 1. http://logging.apache.org/log4net/index.html
