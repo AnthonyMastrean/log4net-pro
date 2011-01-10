@@ -4,9 +4,6 @@ using log4net;
 
 namespace Intro
 {
-    /// <summary>
-    /// log4net @ [http://logging.apache.org/log4net/index.html]
-    /// </summary>
     public class Program
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof (Program));
