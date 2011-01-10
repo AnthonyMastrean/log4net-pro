@@ -1,8 +1,8 @@
 ﻿using System;
-using log4net.intro.Concepts;
-using log4net.intro.Features.RateLimits;
+using Intro.Concepts;
+using Intro.Features.RateLimits;
 
-namespace log4net.intro.Features
+namespace Intro.Features
 {
     public class ExpensiveServiceProxyBuilder
     {

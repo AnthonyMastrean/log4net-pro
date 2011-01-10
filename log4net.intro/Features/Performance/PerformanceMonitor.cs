@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using log4net;
 
-namespace log4net.intro.Features.Performance
+namespace Intro.Features.Performance
 {
     public class PerformanceMonitor : IDisposable
     {

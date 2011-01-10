@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace log4net.intro.Features.RateLimits
+namespace Intro.Features.RateLimits
 {
     public class RateLimiter
     {

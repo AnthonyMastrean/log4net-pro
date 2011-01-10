@@ -1,6 +1,6 @@
-﻿using log4net.intro.Features;
+﻿using Intro.Features;
 
-namespace log4net.intro
+namespace Intro
 {
     /// <summary>
     /// log4net @ [http://logging.apache.org/log4net/index.html]

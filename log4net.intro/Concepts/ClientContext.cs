@@ -1,4 +1,6 @@
-﻿namespace log4net.intro.Concepts
+﻿using log4net;
+
+namespace Intro.Concepts
 {
     public class ClientContext
     {

@@ -8,8 +8,8 @@
     <ProjectGuid>{BE6F5B43-095A-433B-B159-F1E88510A669}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>log4net.intro</RootNamespace>
-    <AssemblyName>log4net.intro</AssemblyName>
+    <RootNamespace>Intro</RootNamespace>
+    <AssemblyName>Intro</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
