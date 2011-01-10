@@ -14,7 +14,7 @@ namespace Intro.Concepts
         public ClientContext(string name)
         {
             Name = name;
-            LogicalThreadContext.Properties["Client"] = Name;
+            LogicalThreadContext.Properties["client"] = Name;
         }
 
         public override string ToString()

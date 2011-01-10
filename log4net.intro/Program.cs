@@ -11,12 +11,10 @@ namespace Intro
 
         static Program()
         {
-            AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
-        }
-
-        private static void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
-            Log.Error("An unhandled exception occurred. The application is shutting down.", e.ExceptionObject as Exception);
+            AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
+                                                              {
+                                                                  Log.Error("An unhandled exception occurred. The application is shutting down.", e.ExceptionObject as Exception);
+                                                              };
         }
 
         public static void Main(params string[] args)
