@@ -1,60 +1,29 @@
-﻿using System;
-
-namespace Intro.Features.RateLimits
+﻿namespace Intro.Features.RateLimits
 {
     public class RateLimiter
     {
-        private readonly int allowedCalls;
-        private readonly TimeSpan duration;
-        private DateTime lastStartTime;
-        private int actualCalls;
+        private readonly int limit;
+        private int actual;
 
-        public RateLimiter(int allowedCalls, TimeSpan duration)
+        public RateLimiter(int limit)
         {
-            this.allowedCalls = allowedCalls;
-            this.duration = duration;
+            this.limit = limit;
             Reset();
         }
 
         public bool IsOverThreshold()
         {
-            return actualCalls > allowedCalls;
+            return actual > limit;
         }
 
         public void Increment()
         {
-            if (IsCurrentDurationOver())
-                Reset();
-
-            IncrementActualCalls();
+            actual++;
         }
 
-        private bool IsCurrentDurationOver()
+        public void Reset()
         {
-            var now = DateTime.UtcNow;
-            var interval = now - lastStartTime;
-            return interval > duration;
-        }
-
-        private void Reset()
-        {
-            ResetLastStartTime();
-            ResetActualCalls();
-        }
-
-        private void ResetLastStartTime()
-        {
-            lastStartTime = DateTime.UtcNow;
-        }
-
-        private void ResetActualCalls()
-        {
-            actualCalls = 0;
-        }
-
-        private void IncrementActualCalls()
-        {
-            actualCalls++;
+            actual = 0;
         }
     }
 }

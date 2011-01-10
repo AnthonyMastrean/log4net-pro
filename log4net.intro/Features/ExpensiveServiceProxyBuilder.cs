@@ -1,5 +1,4 @@
-﻿using System;
-using Intro.Concepts;
+﻿using Intro.Concepts;
 using Intro.Features.RateLimits;
 
 namespace Intro.Features
@@ -15,7 +14,7 @@ namespace Intro.Features
 
         public ExpensiveService Build()
         {
-            return new ExpensiveService(new RateLimiter(10, TimeSpan.FromMinutes(1)));
+            return new ExpensiveService(new RateLimiter(limit: 10));
         }
     }
 }
