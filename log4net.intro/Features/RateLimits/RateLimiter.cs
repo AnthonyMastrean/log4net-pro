@@ -21,6 +21,9 @@
             return actual > limit;
         }
 
+        /// <summary>
+        /// The rate limiter will throw an exception if the rate is increased beyond the limit :)
+        /// </summary>
         public void Increment()
         {
             IncrementActual();
