@@ -1,19 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro", "log4net.intro\Intro.csproj", "{BE6F5B43-095A-433B-B159-F1E88510A669}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FDBAFDEE-C0BA-445F-AD63-C076B1D2BE43}"
 	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		log4net.intro.vsmdi = log4net.intro.vsmdi
 		readme.txt = readme.txt
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro.Contrib", "Intro.Contrib\Intro.Contrib.csproj", "{015D0A23-8720-4455-8EF7-17D3BD3E4520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro.Tests", "Intro.Tests\Intro.Tests.csproj", "{6FB127B8-98CE-47D1-BCB4-9BB95B425C4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro", "Intro\Intro.csproj", "{BE6F5B43-095A-433B-B159-F1E88510A669}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = log4net.intro.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{015D0A23-8720-4455-8EF7-17D3BD3E4520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015D0A23-8720-4455-8EF7-17D3BD3E4520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015D0A23-8720-4455-8EF7-17D3BD3E4520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015D0A23-8720-4455-8EF7-17D3BD3E4520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB127B8-98CE-47D1-BCB4-9BB95B425C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB127B8-98CE-47D1-BCB4-9BB95B425C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB127B8-98CE-47D1-BCB4-9BB95B425C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB127B8-98CE-47D1-BCB4-9BB95B425C4B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BE6F5B43-095A-433B-B159-F1E88510A669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BE6F5B43-095A-433B-B159-F1E88510A669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE6F5B43-095A-433B-B159-F1E88510A669}.Release|Any CPU.ActiveCfg = Release|Any CPU
