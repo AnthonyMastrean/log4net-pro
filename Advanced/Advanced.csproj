@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BE6F5B43-095A-433B-B159-F1E88510A669}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{D2248C9F-9D9B-4330-BFE9-06EAB8868A18}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Intro</RootNamespace>
-    <AssemblyName>Intro</AssemblyName>
+    <RootNamespace>Advanced</RootNamespace>
+    <AssemblyName>Advanced</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,39 +30,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\ExpensiveService.cs" />
-    <Compile Include="Features\ExpensiveServiceProxyBuilder.cs" />
-    <Compile Include="Features\Performance\PerformanceMonitor.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Concepts\ClientContext.cs" />
-    <Compile Include="Features\RateLimit\RateLimiter.cs" />
-    <Compile Include="Features\RateLimit\RateLimitExceededException.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Intro.Contrib\Intro.Contrib.csproj">
-      <Project>{015D0A23-8720-4455-8EF7-17D3BD3E4520}</Project>
-      <Name>Intro.Contrib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

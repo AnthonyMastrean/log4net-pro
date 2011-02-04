@@ -1,5 +1,5 @@
 ﻿using Intro.Concepts;
-using Intro.Features.RateLimits;
+using Intro.Features.RateLimit;
 
 namespace Intro.Features
 {

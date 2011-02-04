@@ -1,4 +1,4 @@
-﻿namespace Intro.Features.RateLimits
+﻿namespace Intro.Features.RateLimit
 {
     public class RateLimiter
     {

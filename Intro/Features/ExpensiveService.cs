@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Intro.Features.Performance;
-using Intro.Features.RateLimits;
+using Intro.Features.RateLimit;
 using log4net;
 
 namespace Intro.Features

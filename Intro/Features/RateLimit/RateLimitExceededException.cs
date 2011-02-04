@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Intro.Features.RateLimits
+namespace Intro.Features.RateLimit
 {
     public class RateLimitExceededException : Exception
     {
