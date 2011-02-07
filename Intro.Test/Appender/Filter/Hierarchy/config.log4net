@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  <appender name="Default" type="log4net.Appender.MemoryAppender">
+    <layout type="log4net.Layout.SimpleLayout" />
+  </appender>
+  <appender name="Important" type="log4net.Appender.MemoryAppender">
+    <layout type="log4net.Layout.SimpleLayout" />
+  </appender>
+  <root>
+    <level value="INFO" />
+    <appender-ref ref="Default" />
+  </root>
+  <logger name="Intro">
+    <level value="DEBUG" />
+  </logger>
+  <logger name="Intro.Appenders">
+    <level value="INFO" />
+  </logger>
+  <logger name="Intro.Appenders.IgnoreMe" additivity="false">
+    <level value="INFO" />
+  </logger>
+  <logger name="Intro.Appenders.Important">
+    <level value="DEBUG" />
+    <appender-ref ref="Important" />
+  </logger>
+</log4net>

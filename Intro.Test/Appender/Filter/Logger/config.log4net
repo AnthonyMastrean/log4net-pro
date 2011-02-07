@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  <appender name="Parent" type="log4net.Appender.MemoryAppender">
+    <layout type="log4net.Layout.SimpleLayout" />
+    <filter type="log4net.Filter.LoggerMatchFilter">
+      <loggerToMatch value="Tests" />
+    </filter>
+    <filter type="log4net.Filter.DenyAllFilter" />
+  </appender>
+  <appender name="A" type="log4net.Appender.MemoryAppender">
+    <layout type="log4net.Layout.SimpleLayout" />
+    <filter type="log4net.Filter.LoggerMatchFilter">
+      <loggerToMatch value="Tests.Appenders.A" />
+    </filter>
+    <filter type="log4net.Filter.DenyAllFilter" />
+  </appender>
+  <appender name="B" type="log4net.Appender.MemoryAppender">
+    <layout type="log4net.Layout.SimpleLayout" />
+    <filter type="log4net.Filter.LoggerMatchFilter">
+      <loggerToMatch value="Tests.Appenders.B" />
+    </filter>
+    <filter type="log4net.Filter.DenyAllFilter" />
+  </appender>
+  <root>
+    <level value="ALL" />
+    <appender-ref ref="Parent" />
+    <appender-ref ref="A" />
+    <appender-ref ref="B" />
+  </root>
+</log4net>

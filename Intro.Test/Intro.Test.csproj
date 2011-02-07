@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6FB127B8-98CE-47D1-BCB4-9BB95B425C4B}</ProjectGuid>
+    <ProjectGuid>{A2DCA505-1BE3-460C-B3EE-4107A56F2E78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Intro.Test</RootNamespace>
@@ -33,11 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
@@ -45,7 +49,25 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExceptionFormat\WrappingType.cs" />
+    <Compile Include="ExceptionFormat\ThrowingType.cs" />
+    <Compile Include="Tests.cs" />
+    <Compile Include="Appender\Filter\Level\Tests.cs" />
+    <Compile Include="Appender\Filter\Logger\Tests.cs" />
+    <Compile Include="Appender\Filter\Hierarchy\Tests.cs" />
+    <Compile Include="ExceptionFormat\Tests.cs" />
+    <Compile Include="Extension\CallSite\Tests.cs" />
+    <Compile Include="Extension\Filter\Tests.cs" />
+    <Compile Include="Extension\Filter\Advanced\Tests.cs" />
+    <Compile Include="Extension\Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Appender\Filter\Level\config.log4net" />
+    <None Include="Appender\Filter\Logger\config.log4net" />
+    <None Include="Appender\Filter\Hierarchy\config.log4net" />
+    <None Include="Extension\Filter\Advanced\config.log4net" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Intro.Contrib\Intro.Contrib.csproj">
@@ -53,6 +75,7 @@
       <Name>Intro.Contrib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
