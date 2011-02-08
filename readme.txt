@@ -5,7 +5,8 @@ Some ideas...
 4. rate limiting
 
 Download
-http://nuget.org/Packages/Packages/Details/log4net-1-2-10
+log4net: http://nuget.org/Packages/Packages/Details/log4net-1-2-10
+this project: http://github.com/AnthonyMastrean/log4net.Intro
 
 References
 1. http://logging.apache.org/log4net/index.html
