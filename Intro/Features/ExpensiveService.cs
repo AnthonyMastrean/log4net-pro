@@ -37,8 +37,9 @@ namespace Intro.Features
             limiter.Increment();
             using (new PerformanceMonitor(threshold: TimeSpan.FromSeconds(3)))
             {
-                // ... doing something interesting on our expensive service...
+                #region ... doing something interesting on our expensive service...
                 Thread.Sleep(random.Next(1 * 1000, 5 * 1000));
+                #endregion
             }
         }
 
