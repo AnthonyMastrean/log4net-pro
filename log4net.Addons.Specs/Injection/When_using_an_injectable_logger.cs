@@ -16,7 +16,7 @@ namespace log4net.Addons.Specs.Injection
         Because of = () => _logger.For<Logger>().Info("hello");
 
         It should_log_to_the_configured_appender = () => _appender.GetEvents().Length.ShouldEqual(1);
-        It should_log_from_the_right_type = () => _appender.GetEvents()[0].LoggerName.ShouldEqual("log4net.Addons.Injection.Log4NetLogger");
+        It should_log_from_the_right_type = () => _appender.GetEvents()[0].LoggerName.ShouldEqual("log4net.Addons.Injection.Logger");
 
         private static Logger _logger = new Logger();
         private static MemoryAppender _appender = new MemoryAppender();
