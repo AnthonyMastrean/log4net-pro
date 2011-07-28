@@ -46,6 +46,7 @@
     <Compile Include="Config\When_writing_to_a_fluently_configured_logger.cs" />
     <Compile Include="Filter\When_logging_an_exception_matching_the_filter.cs" />
     <Compile Include="Filter\When_logging_an_exception_that_does_not_match_the_filter.cs" />
+    <Compile Include="Injection\When_using_an_injectable_logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
