@@ -4,3 +4,4 @@ obj
 *.user
 *.ReSharper
 _ReSharper*
+packages/*
