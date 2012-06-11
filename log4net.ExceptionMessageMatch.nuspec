@@ -17,5 +17,6 @@
   <files>
     <file src="log4net.ExceptionMessageMatch\bin\Release\log4net.ExceptionMessageMatch.dll" target="lib\log4net.ExceptionMessageMatch.dll" />
     <file src="log4net.ExceptionMessageMatch\bin\Release\log4net.ExceptionMessageMatch.pdb" target="lib\log4net.ExceptionMessageMatch.pdb" />
+    <file src="readme.markdown" target="readme.markdown" />
   </files>
 </package>
