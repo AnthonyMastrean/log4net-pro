@@ -9,8 +9,8 @@ I'm using ReSharper live templates to assist with the noisy reflection and long 
 
 configurator
 
-log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile));
+    log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile));
 
 logger
 
-private static readonly ILog Log = LogManager.GetLogger(typeof($CLASSNAME$));
+    private static readonly ILog Log = LogManager.GetLogger(typeof($CLASSNAME$));
