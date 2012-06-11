@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>log4net.ExceptionMessageMatch</id>
+    <title>Exception Message Match Filter for log4net</title>
+    <version>2.0.0</version>
+    <authors>Anthony Mastrean</authors>
+    <owners>Anthony Mastrean</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/AnthonyMastrean/log4net.ExceptionMessageMatch</projectUrl>
+    <description>An appender filter that works on the exception message of a logging event.</description>
+    <tags>log4net filter exception</tags>
+    <dependencies>
+        <dependency id="log4net" version="[2.0.0,3.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="log4net.ExceptionMessageMatch\bin\Release\log4net.ExceptionMessageMatch.dll" target="lib\log4net.ExceptionMessageMatch.dll" />
+    <file src="log4net.ExceptionMessageMatch\bin\Release\log4net.ExceptionMessageMatch.pdb" target="lib\log4net.ExceptionMessageMatch.pdb" />
+  </files>
+</package>
