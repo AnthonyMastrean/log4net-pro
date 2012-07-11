@@ -6,10 +6,10 @@ This is an appender filter that works on the _exception message_ of a logging ev
 
 You would add the reference to this library and then add the filter to your appender like this
 
-    <appender type="log4net.ExceptionMessageMatch.ExceptionMessageMatchFilter, log4net.ExceptionMessageMatch.dll">
+    <filter type="log4net.ExceptionMessageMatch.ExceptionMessageMatchFilter, log4net.ExceptionMessageMatch.dll">
         <stringToMatch value="An existing connection was forcibly closed by the remote host" />
         <acceptOnMatch value="false" />
-    </appender>
+    </filter>
     
 There's a deeper explanation on this [StackOverflow question][so].
 
