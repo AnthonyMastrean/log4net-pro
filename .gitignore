@@ -1,8 +1,0 @@
-bin
-obj
-*.suo
-*.user
-*.ReSharper
-_ReSharper*
-packages/*
-*.nupkg
