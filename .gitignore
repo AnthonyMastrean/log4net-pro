@@ -1,9 +1,0 @@
-bin
-obj
-TestResults
-_ReSharper*
-*.suo
-*.user
-*.ReSharper
-*.Cache
-.redcar
